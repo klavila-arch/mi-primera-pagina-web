@@ -2,10 +2,215 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Mi Página de la Fase 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periódico digital – Fase 3</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+
+        /* Caja gris tipo wireframe */
+        .placeholder-box {
+            background-color: #e0e0e0;
+            min-height: 140px;
+        }
+
+        .section-title {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #555;
+            border-top: 1px solid #ccc;
+            padding-top: 0.75rem;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: #555;
+            font-size: 0.8rem;
+            text-decoration: none;
+        }
+
+        footer a + a {
+            margin-left: 1.5rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bienvenido a mi proyecto</h1>
-    <p>Este es mi archivo idex.html solicitado para la Fase 1.</p>
+
+    <!-- HEADER: búsqueda, logo, botón -->
+    <header class="bg-light border-bottom">
+        <div class="container py-2 d-flex justify-content-between align-items-center">
+            <form class="d-flex" style="max-width: 260px;">
+                <input class="form-control form-control-sm" type="search" placeholder="Buscar">
+            </form>
+
+            <div class="text-center">
+                <span class="h4 m-0">Logo</span>
+            </div>
+
+            <button class="btn btn-sm btn-dark">Suscríbete</button>
+        </div>
+
+        <!-- Menú de secciones -->
+        <div class="border-top">
+            <div class="container">
+                <nav class="nav justify-content-center small text-uppercase">
+                    <a class="nav-link py-2" href="#">Últimas noticias</a>
+                    <a class="nav-link py-2" href="#">Mundo</a>
+                    <a class="nav-link py-2" href="#">Deportes</a>
+                    <a class="nav-link py-2" href="#">Cultura</a>
+                    <a class="nav-link py-2" href="#">Economía</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-4">
+
+        <!-- GRID PRINCIPAL -->
+        <div class="row g-3">
+            <!-- Columna izquierda: podcast -->
+            <div class="col-md-3">
+                <h6 class="text-uppercase small mb-2">Episodios de podcast</h6>
+                <div class="border p-2 bg-white">
+                    <p class="small text-muted mb-1">Minuto diario: Reports from around the world</p>
+                    <div class="placeholder-box mb-2"></div>
+                    <p class="small mb-0 text-muted">Nicole Shute · 23:04</p>
+                </div>
+            </div>
+
+            <!-- Columna central: nota principal grande -->
+            <div class="col-md-6">
+                <div class="border p-2 bg-white mb-3">
+                    <div class="placeholder-box mb-2"></div>
+                    <h5 class="mb-1">Inicia la FIL 2025 con homenajes a escritoras latinoamericanas</h5>
+                    <p class="small text-muted mb-0">
+                        La feria del libro arranca con la presencia de autoras de toda la región y un programa especial dedicado a la narrativa contemporánea.
+                    </p>
+                </div>
+
+                <div class="border-top pt-2 small text-muted">
+                    <span>Redacción · 28 nov 2025</span>
+                </div>
+            </div>
+
+            <!-- Columna derecha: dos notas -->
+            <div class="col-md-3">
+                <div class="border p-2 bg-white mb-3">
+                    <div class="placeholder-box mb-2"></div>
+                    <h6 class="mb-1">México avanza a semifinales de la Copa Oro Femenil 2025</h6>
+                    <p class="small text-muted mb-0">Red Bullers · 28 nov 2025</p>
+                </div>
+
+                <div class="border p-2 bg-white">
+                    <div class="placeholder-box mb-2"></div>
+                    <h6 class="mb-1">Refugios registran alza de adopciones en noviembre</h6>
+                    <p class="small text-muted mb-0">Redacción · 28 nov 2025</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- COMIDA Y BEBIDA -->
+        <h6 class="section-title">Comida y bebida</h6>
+        <div class="row g-3">
+            <div class="col-6 col-md-3">
+                <div class="border p-2 bg-white">
+                    <div class="placeholder-box mb-2"></div>
+                    <p class="small mb-0">Pozolerías en CDMX registran alta afluencia en temporada navideña.</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="border p-2 bg-white">
+                    <div class="placeholder-box mb-2"></div>
+                    <p class="small mb-0">El auge del café de especialidad impulsa pequeñas propuestas en la zona centro.</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="border p-2 bg-white">
+                    <div class="placeholder-box mb-2"></div>
+                    <p class="small mb-0">Restaurantes mexicanos entre los favoritos para fin de año.</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="border p-2 bg-white">
+                    <div class="placeholder-box mb-2"></div>
+                    <p class="small mb-0">Chefs apuestan por cocina vegetal para nuevos menús.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ELECCIÓN DEL EDITOR -->
+        <h6 class="section-title">Elección del editor</h6>
+        <div class="row g-3">
+            <div class="col-md-4">
+                <div class="border p-3 bg-white h-100">
+                    <div class="d-flex">
+                        <div class="me-3 display-5 fw-bold">1</div>
+                        <div>
+                            <p class="small text-uppercase mb-1 text-muted">Nacional</p>
+                            <p class="mb-1">ACM activa protocolo por banco de niebla; hay retrasos.</p>
+                            <p class="small text-muted mb-0">Redacción</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="border p-3 bg-white h-100">
+                    <div class="d-flex">
+                        <div class="me-3 display-5 fw-bold">2</div>
+                        <div>
+                            <p class="small text-uppercase mb-1 text-muted">Deportes</p>
+                            <p class="mb-1">Inicia la Liga MX Femenil: equipos presentan refuerzos.</p>
+                            <p class="small text-muted mb-0">Tomás Ortiz</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="border p-3 bg-white h-100">
+                    <div class="d-flex">
+                        <div class="me-3 display-5 fw-bold">3</div>
+                        <div>
+                            <p class="small text-uppercase mb-1 text-muted">Cultura</p>
+                            <p class="mb-1">Museo Tamayo inaugura exposición sobre arte digital.</p>
+                            <p class="small text-muted mb-0">Sofía Aguirre</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LOGO FOOTER CENTRAL -->
+        <div class="text-center my-4">
+            <div class="fw-bold mb-1">Logo</div>
+            <div class="small">
+                <span class="me-2"></span>
+                <span class="me-2"></span>
+                <span class="me-2"></span>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-top bg-light py-3">
+        <div class="container d-flex flex-wrap justify-content-center">
+            <a href="#">Acerca de</a>
+            <a href="#">Autores</a>
+            <a href="#">Archivo</a>
+            <a href="#">Términos y condiciones</a>
+            <a href="#">Política de cookies</a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
