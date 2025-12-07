@@ -9,92 +9,67 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+        /* Ajustar el ancho general del sitio */
+        .container {
+            max-width: 1150px !important;
+        }
+
         body {
             background-color: #f5f5f5;
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-weight: 400;
+            color: #333;
         }
 
         /* Caja gris tipo wireframe */
         .placeholder-box {
-            background-color: #e0e0e0;
-            min-height: 140px;
+            background-color: #d4d4d4;
+            min-height: 160px;
+        }
+
+        /* Estilo del menú */
+        header .nav-link {
+            padding-top: 0.6rem !important;
+            padding-bottom: 0.6rem !important;
+            font-size: 0.9rem;
+            color: #3a3a3a !important;
+        }
+
+        header .nav-link:hover {
+            color: #000 !important;
+        }
+
+        /* Espaciado entre header y contenido */
+        main {
+            margin-top: 1.2rem;
         }
 
         .section-title {
             font-size: 0.9rem;
             text-transform: uppercase;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.07em;
             color: #555;
             border-top: 1px solid #ccc;
-            padding-top: 0.75rem;
-            margin-top: 2rem;
+            padding-top: 1rem;
+            margin-top: 2.5rem;
         }
 
         footer a {
             color: #555;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             text-decoration: none;
         }
-
+        
         footer a + a {
             margin-left: 1.5rem;
         }
-        /* Ajustar ancho de la página como periódico */
-.container {
-    max-width: 1100px !important; /* para que no quede tan ancho */
-}
-
-/* Header compacto */
-header .container {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-}
-
-/* Espacio entre header y menú */
-header .nav-link {
-    padding-top: 0.6rem !important;
-    padding-bottom: 0.6rem !important;
-}
-
-/* Espacio entre el menú y el contenido */
-main {
-    margin-top: 1rem;
-}
-
-/* Caja placeholder (para que imite más al wireframe) */
-.placeholder-box {
-    background-color: #dcdcdc;
-    min-height: 180px; /* un poco más alta */
-}
-
-/* Bajar el tamaño del título principal de noticias */
-h5 {
-    font-size: 1.05rem;
-}
-
-/* Ajustar tipografía general */
-body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    font-weight: 400;
-    color: #333;
-}
-
-/* Ajustar textos pequeños */
-.small,
-.text-muted {
-    font-size: 0.85rem;
-}
-
-/* Línea separadora más delgada */
-.section-title {
-    border-top: 1px solid #ddd;
-}
-
     </style>
 </head>
+
 <body>
 
-    <!-- HEADER: búsqueda, logo, botón -->
-    <header class="bg-light border-bottom">
+    <!-- HEADER -->
+    <header class="bg-light border-bottom pb-1">
         <div class="container py-2 d-flex justify-content-between align-items-center">
             <form class="d-flex" style="max-width: 260px;">
                 <input class="form-control form-control-sm" type="search" placeholder="Buscar">
@@ -107,136 +82,148 @@ body {
             <button class="btn btn-sm btn-dark">Suscríbete</button>
         </div>
 
-        <!-- Menú de secciones -->
+        <!-- MENU -->
         <div class="border-top">
             <div class="container">
                 <nav class="nav justify-content-center small text-uppercase">
-                    <a class="nav-link py-2" href="#">Últimas noticias</a>
-                    <a class="nav-link py-2" href="#">Mundo</a>
-                    <a class="nav-link py-2" href="#">Deportes</a>
-                    <a class="nav-link py-2" href="#">Cultura</a>
-                    <a class="nav-link py-2" href="#">Economía</a>
+                    <a class="nav-link" href="#">Últimas noticias</a>
+                    <a class="nav-link" href="#">Mundo</a>
+                    <a class="nav-link" href="#">Deportes</a>
+                    <a class="nav-link" href="#">Cultura</a>
+                    <a class="nav-link" href="#">Economía</a>
                 </nav>
             </div>
         </div>
     </header>
 
-    <main class="container my-4">
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container">
 
-        <!-- GRID PRINCIPAL -->
         <div class="row g-3">
-            <!-- Columna izquierda: podcast -->
+            
+            <!-- COLUMNA IZQUIERDA -->
             <div class="col-md-3">
                 <h6 class="text-uppercase small mb-2">Episodios de podcast</h6>
-                <div class="border p-2 bg-white">
+                <div class="border bg-white p-2">
                     <p class="small text-muted mb-1">Minuto diario: Reports from around the world</p>
                     <div class="placeholder-box mb-2"></div>
                     <p class="small mb-0 text-muted">Nicole Shute · 23:04</p>
                 </div>
             </div>
 
-            <!-- Columna central: nota principal grande -->
+            <!-- COLUMNA CENTRAL (nota principal) -->
             <div class="col-md-6">
-                <div class="border p-2 bg-white mb-3">
+                <div class="border bg-white p-2 mb-3">
                     <div class="placeholder-box mb-2"></div>
                     <h5 class="mb-1">Inicia la FIL 2025 con homenajes a escritoras latinoamericanas</h5>
-                    <p class="small text-muted mb-0">
+                    <p class="small text-muted">
                         La feria del libro arranca con la presencia de autoras de toda la región y un programa especial dedicado a la narrativa contemporánea.
                     </p>
                 </div>
-
                 <div class="border-top pt-2 small text-muted">
-                    <span>Redacción · 28 nov 2025</span>
+                    Redacción · 28 nov 2025
                 </div>
             </div>
 
-            <!-- Columna derecha: dos notas -->
+            <!-- COLUMNA DERECHA (dos notas pequeñas) -->
             <div class="col-md-3">
-                <div class="border p-2 bg-white mb-3">
+
+                <div class="border bg-white p-2 mb-3">
                     <div class="placeholder-box mb-2"></div>
                     <h6 class="mb-1">México avanza a semifinales de la Copa Oro Femenil 2025</h6>
                     <p class="small text-muted mb-0">Red Bullers · 28 nov 2025</p>
                 </div>
 
-                <div class="border p-2 bg-white">
+                <div class="border bg-white p-2">
                     <div class="placeholder-box mb-2"></div>
                     <h6 class="mb-1">Refugios registran alza de adopciones en noviembre</h6>
                     <p class="small text-muted mb-0">Redacción · 28 nov 2025</p>
                 </div>
+
             </div>
         </div>
+
 
         <!-- COMIDA Y BEBIDA -->
         <h6 class="section-title">Comida y bebida</h6>
+
         <div class="row g-3">
             <div class="col-6 col-md-3">
-                <div class="border p-2 bg-white">
+                <div class="border bg-white p-2">
                     <div class="placeholder-box mb-2"></div>
-                    <p class="small mb-0">Pozolerías en CDMX registran alta afluencia en temporada navideña.</p>
+                    <p class="small m-0">Pozolerías en CDMX registran alta afluencia en temporada navideña.</p>
                 </div>
             </div>
+
             <div class="col-6 col-md-3">
-                <div class="border p-2 bg-white">
+                <div class="border bg-white p-2">
                     <div class="placeholder-box mb-2"></div>
-                    <p class="small mb-0">El auge del café de especialidad impulsa pequeñas propuestas en la zona centro.</p>
+                    <p class="small m-0">El auge del café impulsa propuestas jóvenes en la zona centro.</p>
                 </div>
             </div>
+
             <div class="col-6 col-md-3">
-                <div class="border p-2 bg-white">
+                <div class="border bg-white p-2">
                     <div class="placeholder-box mb-2"></div>
-                    <p class="small mb-0">Restaurantes mexicanos entre los favoritos para fin de año.</p>
+                    <p class="small m-0">Restaurantes mexicanos entre los favoritos de fin de año.</p>
                 </div>
             </div>
+
             <div class="col-6 col-md-3">
-                <div class="border p-2 bg-white">
+                <div class="border bg-white p-2">
                     <div class="placeholder-box mb-2"></div>
-                    <p class="small mb-0">Chefs apuestan por cocina vegetal para nuevos menús.</p>
+                    <p class="small m-0">Chefs apuestan por cocina vegetal para nuevos menús.</p>
                 </div>
             </div>
         </div>
+
 
         <!-- ELECCIÓN DEL EDITOR -->
         <h6 class="section-title">Elección del editor</h6>
+
         <div class="row g-3">
+
             <div class="col-md-4">
-                <div class="border p-3 bg-white h-100">
+                <div class="border bg-white p-3">
                     <div class="d-flex">
                         <div class="me-3 display-5 fw-bold">1</div>
                         <div>
-                            <p class="small text-uppercase mb-1 text-muted">Nacional</p>
+                            <p class="small text-uppercases text-muted mb-1">Nacional</p>
                             <p class="mb-1">ACM activa protocolo por banco de niebla; hay retrasos.</p>
-                            <p class="small text-muted mb-0">Redacción</p>
+                            <p class="small text-muted">Redacción</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4">
-                <div class="border p-3 bg-white h-100">
+                <div class="border bg-white p-3">
                     <div class="d-flex">
                         <div class="me-3 display-5 fw-bold">2</div>
                         <div>
-                            <p class="small text-uppercase mb-1 text-muted">Deportes</p>
+                            <p class="small text-muted mb-1">Deportes</p>
                             <p class="mb-1">Inicia la Liga MX Femenil: equipos presentan refuerzos.</p>
-                            <p class="small text-muted mb-0">Tomás Ortiz</p>
+                            <p class="small text-muted">Tomás Ortiz</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4">
-                <div class="border p-3 bg-white h-100">
+                <div class="border bg-white p-3">
                     <div class="d-flex">
                         <div class="me-3 display-5 fw-bold">3</div>
                         <div>
-                            <p class="small text-uppercase mb-1 text-muted">Cultura</p>
+                            <p class="small text-muted mb-1">Cultura</p>
                             <p class="mb-1">Museo Tamayo inaugura exposición sobre arte digital.</p>
-                            <p class="small text-muted mb-0">Sofía Aguirre</p>
+                            <p class="small text-muted">Sofía Aguirre</p>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
+
 
         <!-- LOGO FOOTER CENTRAL -->
         <div class="text-center my-4">
@@ -261,7 +248,10 @@ body {
         </div>
     </footer>
 
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
+
