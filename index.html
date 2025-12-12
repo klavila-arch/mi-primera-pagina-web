@@ -7,12 +7,11 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- AOS CSS -->
-<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
     <style>
-        /* Ajustar el ancho general del sitio */
         .container {
             max-width: 1150px !important;
         }
@@ -24,13 +23,11 @@
             color: #333;
         }
 
-        /* Caja gris tipo wireframe */
         .placeholder-box {
             background-color: #d4d4d4;
             min-height: 160px;
         }
 
-        /* Estilo del menú */
         header .nav-link {
             padding-top: 0.6rem !important;
             padding-bottom: 0.6rem !important;
@@ -42,7 +39,6 @@
             color: #000 !important;
         }
 
-        /* Espaciado entre header y contenido */
         main {
             margin-top: 1.2rem;
         }
@@ -62,7 +58,7 @@
             font-size: 0.85rem;
             text-decoration: none;
         }
-        
+
         footer a + a {
             margin-left: 1.5rem;
         }
@@ -101,50 +97,60 @@
 
     <!-- CONTENIDO PRINCIPAL -->
     <main class="container">
-        
-        <!-- Contador con botón -->
-<section class="my-4 text-center">
-    <h2 id="contador">0</h2>
-    <button id="btnContador" class="btn btn-primary btn-sm">Hacer clic</button>
-</section>
 
+        <!-- CONTADOR + BOTÓN -->
+        <section class="my-4 text-center">
+            <h2 id="contador">0</h2>
+            <button id="btnContador" class="btn btn-primary btn-sm">Hacer clic</button>
+        </section>
 
         <div class="row g-3">
             
             <!-- COLUMNA IZQUIERDA -->
             <div class="col-md-3">
-                <h6 class="text-uppercase small mb-2" data-aos="fade-right">Episodios de podcast</h6>
-                <div class="border bg-white p-2">
+                <h6 class="text-uppercase small mb-2" data-aos="fade-right" data-aos-duration="1500">
+                    Episodios de podcast
+                </h6>
+
+                <div class="border bg-white p-2" data-aos="fade-up" data-aos-duration="1500">
                     <p class="small text-muted mb-1">Minuto diario: Reports from around the world</p>
                     <div class="placeholder-box mb-2"></div>
                     <p class="small mb-0 text-muted">Nicole Shute · 23:04</p>
                 </div>
             </div>
 
-            <!-- COLUMNA CENTRAL (nota principal) -->
+            <!-- COLUMNA CENTRAL -->
             <div class="col-md-6">
-                <div class="border bg-white p-2 mb-3">
+
+                <div class="border bg-white p-2 mb-3" data-aos="zoom-in" data-aos-duration="1500">
                     <div class="placeholder-box mb-2"></div>
-                    <h5 class="mb-1" data-aos="fade-up">Inicia la FIL 2025 con homenajes a escritoras latinoamericanas</h5>
+
+                    <h5 class="mb-1" 
+                        data-aos="fade-up" 
+                        data-aos-duration="1500">
+                        Inicia la FIL 2025 con homenajes a escritoras latinoamericanas
+                    </h5>
+
                     <p class="small text-muted">
                         La feria del libro arranca con la presencia de autoras de toda la región y un programa especial dedicado a la narrativa contemporánea.
                     </p>
                 </div>
-                <div class="border-top pt-2 small text-muted">
+
+                <div class="border-top pt-2 small text-muted" data-aos="fade-up" data-aos-duration="1500">
                     Redacción · 28 nov 2025
                 </div>
             </div>
 
-            <!-- COLUMNA DERECHA (dos notas pequeñas) -->
+            <!-- COLUMNA DERECHA -->
             <div class="col-md-3">
 
-                <div class="border bg-white p-2 mb-3">
+                <div class="border bg-white p-2 mb-3" data-aos="fade-left" data-aos-duration="1500">
                     <div class="placeholder-box mb-2"></div>
                     <h6 class="mb-1">México avanza a semifinales de la Copa Oro Femenil 2025</h6>
                     <p class="small text-muted mb-0">Red Bullers · 28 nov 2025</p>
                 </div>
 
-                <div class="border bg-white p-2">
+                <div class="border bg-white p-2" data-aos="fade-left" data-aos-duration="1500">
                     <div class="placeholder-box mb-2"></div>
                     <h6 class="mb-1">Refugios registran alza de adopciones en noviembre</h6>
                     <p class="small text-muted mb-0">Redacción · 28 nov 2025</p>
@@ -153,32 +159,34 @@
             </div>
         </div>
 
-
         <!-- COMIDA Y BEBIDA -->
-        <h6 class="section-title" data-aos="fade-right">Comida y bebida</h6>
+        <h6 class="section-title" data-aos="fade-right" data-aos-duration="1500">
+            Comida y bebida
+        </h6>
+
         <div class="row g-3">
-            <div class="col-6 col-md-3">
+            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-duration="1500">
                 <div class="border bg-white p-2">
                     <div class="placeholder-box mb-2"></div>
                     <p class="small m-0">Pozolerías en CDMX registran alta afluencia en temporada navideña.</p>
                 </div>
             </div>
 
-            <div class="col-6 col-md-3">
+            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-duration="1500">
                 <div class="border bg-white p-2">
                     <div class="placeholder-box mb-2"></div>
                     <p class="small m-0">El auge del café impulsa propuestas jóvenes en la zona centro.</p>
                 </div>
             </div>
 
-            <div class="col-6 col-md-3">
+            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-duration="1500">
                 <div class="border bg-white p-2">
                     <div class="placeholder-box mb-2"></div>
                     <p class="small m-0">Restaurantes mexicanos entre los favoritos de fin de año.</p>
                 </div>
             </div>
 
-            <div class="col-6 col-md-3">
+            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-duration="1500">
                 <div class="border bg-white p-2">
                     <div class="placeholder-box mb-2"></div>
                     <p class="small m-0">Chefs apuestan por cocina vegetal para nuevos menús.</p>
@@ -186,18 +194,19 @@
             </div>
         </div>
 
-
         <!-- ELECCIÓN DEL EDITOR -->
-        <h6 class="section-title">Elección del editor</h6>
+        <h6 class="section-title" data-aos="fade-right" data-aos-duration="1500">
+            Elección del editor
+        </h6>
 
         <div class="row g-3">
 
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="flip-left" data-aos-duration="1500">
                 <div class="border bg-white p-3">
                     <div class="d-flex">
                         <div class="me-3 display-5 fw-bold">1</div>
                         <div>
-                            <p class="small text-uppercases text-muted mb-1">Nacional</p>
+                            <p class="small text-muted mb-1">Nacional</p>
                             <p class="mb-1">ACM activa protocolo por banco de niebla; hay retrasos.</p>
                             <p class="small text-muted">Redacción</p>
                         </div>
@@ -205,7 +214,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="flip-left" data-aos-duration="1500">
                 <div class="border bg-white p-3">
                     <div class="d-flex">
                         <div class="me-3 display-5 fw-bold">2</div>
@@ -218,7 +227,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="flip-left" data-aos-duration="1500">
                 <div class="border bg-white p-3">
                     <div class="d-flex">
                         <div class="me-3 display-5 fw-bold">3</div>
@@ -233,9 +242,8 @@
 
         </div>
 
-
-        <!-- LOGO FOOTER CENTRAL -->
-        <div class="text-center my-4">
+        <!-- LOGO FOOTER -->
+        <div class="text-center my-4" data-aos="fade-up" data-aos-duration="1500">
             <div class="fw-bold mb-1">Logo</div>
             <div class="small">
                 <span class="me-2"></span>
@@ -258,30 +266,30 @@
     </footer>
 
 
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Saludo en consola -->
+    <script>
+        console.log("Hola, bienvenida a mi periódico digital desde JavaScript 😄");
+    </script>
+
+    <!-- CONTADOR -->
+    <script>
+        const h2Contador = document.getElementById("contador");
+        const boton = document.getElementById("btnContador");
+
+        boton.addEventListener("click", function () {
+            let valorActual = Number(h2Contador.textContent);
+            h2Contador.textContent = valorActual + 1;
+        });
+    </script>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- AOS JS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-
-    <script>
-  console.log("Hola, bienvenida a mi periódico digital desde JavaScript 😄");
-</script>
-
-    <script>
-  const h2Contador = document.getElementById("contador");
-  const boton = document.getElementById("btnContador");
-
-  boton.addEventListener("click", function () {
-      let valorActual = Number(h2Contador.textContent);
-      h2Contador.textContent = valorActual + 1;
-  });
-</script>
-
-
 
 </body>
 </html>
