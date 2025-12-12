@@ -98,6 +98,13 @@
 
     <!-- CONTENIDO PRINCIPAL -->
     <main class="container">
+        
+        <!-- Contador con botón -->
+<section class="my-4 text-center">
+    <h2 id="contador">0</h2>
+    <button id="btnContador" class="btn btn-primary btn-sm">Hacer clic</button>
+</section>
+
 
         <div class="row g-3">
             
@@ -254,6 +261,17 @@
     <script>
   console.log("Hola, bienvenida a mi periódico digital desde JavaScript 😄");
 </script>
+
+    <script>
+  const h2Contador = document.getElementById("contador");
+  const boton = document.getElementById("btnContador");
+
+  boton.addEventListener("click", function () {
+      let valorActual = Number(h2Contador.textContent);
+      h2Contador.textContent = valorActual + 1;
+  });
+</script>
+
 
 
 </body>
