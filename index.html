@@ -1,335 +1,395 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Periódico digital – Fase 3</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Periódico digital – Fase 5</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- AOS CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
-    <style>
-        .container {
-            max-width: 1150px !important;
-        }
+  <style>
+    .container { max-width: 1150px !important; }
 
-        body {
-            background-color: #f5f5f5;
-            font-family: "Segoe UI", Arial, sans-serif;
-            font-weight: 400;
-            color: #333;
-        }
+    body {
+      background-color: #f5f5f5;
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-weight: 400;
+      color: #333;
+    }
 
-        .placeholder-box {
-            background-color: #d4d4d4;
-            min-height: 160px;
-        }
+    header .nav-link {
+      padding-top: 0.6rem !important;
+      padding-bottom: 0.6rem !important;
+      font-size: 0.9rem;
+      color: #3a3a3a !important;
+    }
+    header .nav-link:hover { color: #000 !important; }
 
-        header .nav-link {
-            padding-top: 0.6rem !important;
-            padding-bottom: 0.6rem !important;
-            font-size: 0.9rem;
-            color: #3a3a3a !important;
-        }
+    main { margin-top: 1.2rem; }
 
-        header .nav-link:hover {
-            color: #000 !important;
-        }
+    .section-title {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: #555;
+      border-top: 1px solid #ccc;
+      padding-top: 1rem;
+      margin-top: 2.5rem;
+    }
 
-        main {
-            margin-top: 1.2rem;
-        }
+    /* Tarjetas con imagen */
+    .card-img-top {
+      height: 160px;
+      object-fit: cover;
+    }
 
-        .section-title {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.07em;
-            color: #555;
-            border-top: 1px solid #ccc;
-            padding-top: 1rem;
-            margin-top: 2.5rem;
-        }
+    footer a {
+      color: #555;
+      font-size: 0.85rem;
+      text-decoration: none;
+    }
+    footer a + a { margin-left: 1.5rem; }
 
-        footer a {
-            color: #555;
-            font-size: 0.85rem;
-            text-decoration: none;
-        }
-
-        footer a + a {
-            margin-left: 1.5rem;
-        }
-    </style>
+    /* Mensajes del form */
+    #subMsg { min-height: 18px; }
+  </style>
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header class="bg-light border-bottom pb-1">
-        <div class="container py-2 d-flex justify-content-between align-items-center">
-            <form class="d-flex" style="max-width: 260px;">
-                <input class="form-control form-control-sm" type="search" placeholder="Buscar">
-            </form>
+  <!-- HEADER -->
+  <header class="bg-light border-bottom pb-1">
+    <div class="container py-2 d-flex justify-content-between align-items-center">
+      <form class="d-flex" style="max-width: 260px;">
+        <input class="form-control form-control-sm" type="search" placeholder="Buscar">
+      </form>
 
-            <div class="text-center">
-                <span class="h4 m-0">Logo</span>
-            </div>
-
-            <button class="btn btn-sm btn-dark" data-bs-toggle="modal" data-bs-target="#modalSuscripcion">
-  Suscríbete
-</button>
-
-        </div>
-
-        <!-- MENU -->
-        <div class="border-top">
-            <div class="container">
-                <nav class="nav justify-content-center small text-uppercase">
-                    <a class="nav-link" href="#">Últimas noticias</a>
-                    <a class="nav-link" href="#">Mundo</a>
-                    <a class="nav-link" href="#">Deportes</a>
-                    <a class="nav-link" href="#">Cultura</a>
-                    <a class="nav-link" href="#">Economía</a>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-    <!-- CONTENIDO PRINCIPAL -->
-    <main class="container">
-
-        <!-- CONTADOR + BOTÓN -->
-        <section class="my-4 text-center">
-  <a class="btn btn-success btn-sm"
-     href="https://open.spotify.com/"
-     target="_blank" rel="noopener">
-     🎧 Escuchar en Spotify
-  </a>
-</section>
-
-        <div class="row g-3">
-            
-            <!-- COLUMNA IZQUIERDA -->
-            <div class="col-md-3">
-                <h6 class="text-uppercase small mb-2" data-aos="fade-right" data-aos-duration="1500">
-                    Episodios de podcast
-                </h6>
-
-                <div class="border bg-white p-2" data-aos="fade-up" data-aos-duration="1500">
-                    <p class="small text-muted mb-1">Minuto diario: Reports from around the world</p>
-                    <img class="img-fluid mb-2"
-     src="https://picsum.photos/800/450?random=11"
-     alt="Imagen de nota"
-     loading="lazy">
-                    <p class="small mb-0 text-muted">Nicole Shute · 23:04</p>
-                </div>
-            </div>
-
-            <!-- COLUMNA CENTRAL -->
-            <div class="col-md-6">
-
-                <div class="border bg-white p-2 mb-3" data-aos="zoom-in" data-aos-duration="1500">
-                    <div class="placeholder-box mb-2"></div>
-
-                    <h5 class="mb-1" 
-                        data-aos="fade-up" 
-                        data-aos-duration="1500">
-                        Inicia la FIL 2025 con homenajes a escritoras latinoamericanas
-                    </h5>
-
-                    <p class="small text-muted">
-                        La feria del libro arranca con la presencia de autoras de toda la región y un programa especial dedicado a la narrativa contemporánea.
-                    </p>
-                </div>
-
-                <div class="border-top pt-2 small text-muted" data-aos="fade-up" data-aos-duration="1500">
-                    Redacción · 28 nov 2025
-                </div>
-            </div>
-
-            <!-- COLUMNA DERECHA -->
-            <div class="col-md-3">
-
-                <div class="border bg-white p-2 mb-3" data-aos="fade-left" data-aos-duration="1500">
-                    <div class="placeholder-box mb-2"></div>
-                    <h6 class="mb-1">México avanza a semifinales de la Copa Oro Femenil 2025</h6>
-                    <p class="small text-muted mb-0">Red Bullers · 28 nov 2025</p>
-                </div>
-
-                <div class="border bg-white p-2" data-aos="fade-left" data-aos-duration="1500">
-                    <div class="placeholder-box mb-2"></div>
-                    <h6 class="mb-1">Refugios registran alza de adopciones en noviembre</h6>
-                    <p class="small text-muted mb-0">Redacción · 28 nov 2025</p>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- COMIDA Y BEBIDA -->
-        <h6 class="section-title" data-aos="fade-right" data-aos-duration="1500">
-            Comida y bebida
-        </h6>
-
-        <div class="row g-3">
-            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-duration="1500">
-                <div class="border bg-white p-2">
-                    <div class="placeholder-box mb-2"></div>
-                    <p class="small m-0">Pozolerías en CDMX registran alta afluencia en temporada navideña.</p>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-duration="1500">
-                <div class="border bg-white p-2">
-                    <div class="placeholder-box mb-2"></div>
-                    <p class="small m-0">El auge del café impulsa propuestas jóvenes en la zona centro.</p>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-duration="1500">
-                <div class="border bg-white p-2">
-                    <div class="placeholder-box mb-2"></div>
-                    <p class="small m-0">Restaurantes mexicanos entre los favoritos de fin de año.</p>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-duration="1500">
-                <div class="border bg-white p-2">
-                    <div class="placeholder-box mb-2"></div>
-                    <p class="small m-0">Chefs apuestan por cocina vegetal para nuevos menús.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- ELECCIÓN DEL EDITOR -->
-        <h6 class="section-title" data-aos="fade-right" data-aos-duration="1500">
-            Elección del editor
-        </h6>
-
-        <div class="row g-3">
-
-            <div class="col-md-4" data-aos="flip-left" data-aos-duration="1500">
-                <div class="border bg-white p-3">
-                    <div class="d-flex">
-                        <div class="me-3 display-5 fw-bold">1</div>
-                        <div>
-                            <p class="small text-muted mb-1">Nacional</p>
-                            <p class="mb-1">ACM activa protocolo por banco de niebla; hay retrasos.</p>
-                            <p class="small text-muted">Redacción</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4" data-aos="flip-left" data-aos-duration="1500">
-                <div class="border bg-white p-3">
-                    <div class="d-flex">
-                        <div class="me-3 display-5 fw-bold">2</div>
-                        <div>
-                            <p class="small text-muted mb-1">Deportes</p>
-                            <p class="mb-1">Inicia la Liga MX Femenil: equipos presentan refuerzos.</p>
-                            <p class="small text-muted">Tomás Ortiz</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4" data-aos="flip-left" data-aos-duration="1500">
-                <div class="border bg-white p-3">
-                    <div class="d-flex">
-                        <div class="me-3 display-5 fw-bold">3</div>
-                        <div>
-                            <p class="small text-muted mb-1">Cultura</p>
-                            <p class="mb-1">Museo Tamayo inaugura exposición sobre arte digital.</p>
-                            <p class="small text-muted">Sofía Aguirre</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- LOGO FOOTER -->
-        <div class="text-center my-4" data-aos="fade-up" data-aos-duration="1500">
-            <div class="fw-bold mb-1">Logo</div>
-            <div class="small">
-                <span class="me-2"></span>
-                <span class="me-2"></span>
-                <span class="me-2"></span>
-            </div>
-        </div>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="border-top bg-light py-3">
-        <div class="container d-flex flex-wrap justify-content-center">
-            <a href="#">Acerca de</a>
-            <a href="#">Autores</a>
-            <a href="#">Archivo</a>
-            <a href="#">Términos y condiciones</a>
-            <a href="#">Política de cookies</a>
-        </div>
-    </footer>
-
-    <!-- Modal Suscripción -->
-<div class="modal fade" id="modalSuscripcion" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-      <div class="modal-header">
-        <h5 class="modal-title">Suscríbete al Periódico Digital</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      <div class="text-center">
+        <span class="h4 m-0">Logo</span>
       </div>
 
-      <div class="modal-body">
-        <form id="formSuscripcion" novalidate>
-          <div class="mb-3">
-            <label class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="subNombre" required maxlength="80">
-            <div class="invalid-feedback">Escribe tu nombre.</div>
+      <!-- Suscríbete abre modal en la MISMA página -->
+      <button class="btn btn-sm btn-dark" data-bs-toggle="modal" data-bs-target="#modalSuscripcion">
+        Suscríbete
+      </button>
+    </div>
+
+    <!-- MENU -->
+    <div class="border-top">
+      <div class="container">
+        <nav class="nav justify-content-center small text-uppercase">
+          <a class="nav-link" href="#">Últimas noticias</a>
+          <a class="nav-link" href="#">Mundo</a>
+          <a class="nav-link" href="#">Deportes</a>
+          <a class="nav-link" href="#">Cultura</a>
+          <a class="nav-link" href="#">Economía</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="container">
+
+    <!-- Spotify (reemplaza al contador y botón) -->
+    <section class="my-4 text-center" data-aos="fade-down" data-aos-duration="900">
+      <a class="btn btn-success btn-sm"
+         href="https://open.spotify.com/"
+         target="_blank" rel="noopener">
+        🎧 Escuchar en Spotify
+      </a>
+    </section>
+
+    <div class="row g-3">
+
+      <!-- COLUMNA IZQUIERDA -->
+      <div class="col-md-3" data-aos="fade-right" data-aos-duration="900">
+        <h6 class="text-uppercase small mb-2">Episodios de podcast</h6>
+
+        <div class="card border">
+          <img src="assets/podcast.jpg" class="card-img-top" alt="Podcast" loading="lazy">
+          <div class="card-body p-2">
+            <p class="small text-muted mb-1">Minuto diario: Reports from around the world</p>
+            <p class="small mb-0 text-muted">Nicole Shute · 23:04</p>
           </div>
-
-          <div class="mb-3">
-            <label class="form-label">Correo</label>
-            <input type="email" class="form-control" id="subEmail" required maxlength="120">
-            <div class="invalid-feedback">Escribe un correo válido.</div>
-          </div>
-
-          <div class="mb-3">
-            <label class="form-label">WhatsApp (opcional)</label>
-            <input type="tel" class="form-control" id="subTel" maxlength="20" placeholder="55 0000 0000">
-          </div>
-
-          <div id="subMsg" class="small"></div>
-
-          <button type="submit" class="btn btn-dark w-100 mt-2">
-            Enviar suscripción
-          </button>
-        </form>
+        </div>
       </div>
 
+      <!-- COLUMNA CENTRAL (nota principal) -->
+      <div class="col-md-6" data-aos="zoom-in" data-aos-duration="900">
+        <div class="card border">
+          <img src="assets/principal.jpg" class="card-img-top" alt="Nota principal" loading="lazy">
+          <div class="card-body p-2">
+            <h5 class="mb-1" data-aos="fade-up" data-aos-duration="1200">
+              Inicia la FIL 2025 con homenajes a escritoras latinoamericanas
+            </h5>
+            <p class="small text-muted mb-0">
+              La feria del libro arranca con la presencia de autoras de toda la región y un programa especial dedicado a la narrativa contemporánea.
+            </p>
+          </div>
+          <div class="border-top p-2 small text-muted">
+            Redacción · 28 nov 2025
+          </div>
+        </div>
+      </div>
+
+      <!-- COLUMNA DERECHA -->
+      <div class="col-md-3">
+
+        <div class="card border mb-3" data-aos="fade-left" data-aos-duration="900">
+          <img src="assets/deportes.jpg" class="card-img-top" alt="Deportes" loading="lazy">
+          <div class="card-body p-2">
+            <h6 class="mb-1">México avanza a semifinales de la Copa Oro Femenil 2025</h6>
+            <p class="small text-muted mb-0">Red Bullers · 28 nov 2025</p>
+          </div>
+        </div>
+
+        <div class="card border" data-aos="fade-left" data-aos-duration="900">
+          <img src="assets/refugios.jpg" class="card-img-top" alt="Refugios" loading="lazy">
+          <div class="card-body p-2">
+            <h6 class="mb-1">Refugios registran alza de adopciones en noviembre</h6>
+            <p class="small text-muted mb-0">Redacción · 28 nov 2025</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- COMIDA Y BEBIDA -->
+    <h6 class="section-title" data-aos="fade-right" data-aos-duration="900">Comida y bebida</h6>
+
+    <div class="row g-3">
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-duration="900">
+        <div class="card border">
+          <img src="assets/comida1.jpg" class="card-img-top" alt="Pozole" loading="lazy">
+          <div class="card-body p-2">
+            <p class="small m-0">Pozolerías en CDMX registran alta afluencia en temporada navideña.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-duration="900">
+        <div class="card border">
+          <img src="assets/comida2.jpg" class="card-img-top" alt="Café" loading="lazy">
+          <div class="card-body p-2">
+            <p class="small m-0">El auge del café impulsa propuestas jóvenes en la zona centro.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-duration="900">
+        <div class="card border">
+          <img src="assets/comida3.jpg" class="card-img-top" alt="Restaurantes" loading="lazy">
+          <div class="card-body p-2">
+            <p class="small m-0">Restaurantes mexicanos entre los favoritos de fin de año.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-duration="900">
+        <div class="card border">
+          <img src="assets/comida4.jpg" class="card-img-top" alt="Cocina vegetal" loading="lazy">
+          <div class="card-body p-2">
+            <p class="small m-0">Chefs apuestan por cocina vegetal para nuevos menús.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ELECCIÓN DEL EDITOR -->
+    <h6 class="section-title" data-aos="fade-right" data-aos-duration="900">Elección del editor</h6>
+
+    <div class="row g-3">
+      <div class="col-md-4" data-aos="flip-left" data-aos-duration="900">
+        <div class="border bg-white p-3">
+          <div class="d-flex">
+            <div class="me-3 display-5 fw-bold">1</div>
+            <div>
+              <p class="small text-muted mb-1">Nacional</p>
+              <p class="mb-1">ACM activa protocolo por banco de niebla; hay retrasos.</p>
+              <p class="small text-muted">Redacción</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="flip-left" data-aos-duration="900">
+        <div class="border bg-white p-3">
+          <div class="d-flex">
+            <div class="me-3 display-5 fw-bold">2</div>
+            <div>
+              <p class="small text-muted mb-1">Deportes</p>
+              <p class="mb-1">Inicia la Liga MX Femenil: equipos presentan refuerzos.</p>
+              <p class="small text-muted">Tomás Ortiz</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="flip-left" data-aos-duration="900">
+        <div class="border bg-white p-3">
+          <div class="d-flex">
+            <div class="me-3 display-5 fw-bold">3</div>
+            <div>
+              <p class="small text-muted mb-1">Cultura</p>
+              <p class="mb-1">Museo Tamayo inaugura exposición sobre arte digital.</p>
+              <p class="small text-muted">Sofía Aguirre</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOGO FOOTER CENTRAL -->
+    <div class="text-center my-4" data-aos="fade-up" data-aos-duration="900">
+      <div class="fw-bold mb-1">Logo</div>
+      <div class="small">
+        <span class="me-2"></span>
+        <span class="me-2"></span>
+        <span class="me-2"></span>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-top bg-light py-3">
+    <div class="container d-flex flex-wrap justify-content-center">
+      <a href="#">Acerca de</a>
+      <a href="#">Autores</a>
+      <a href="#">Archivo</a>
+      <a href="#">Términos y condiciones</a>
+      <a href="#">Política de cookies</a>
+    </div>
+  </footer>
+
+  <!-- Modal Suscripción (misma página) -->
+  <div class="modal fade" id="modalSuscripcion" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title">Suscríbete al Periódico Digital</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+
+        <div class="modal-body">
+          <form id="formSuscripcion" novalidate>
+            <div class="mb-3">
+              <label class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="subNombre" required maxlength="80">
+              <div class="invalid-feedback">Escribe tu nombre.</div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Correo</label>
+              <input type="email" class="form-control" id="subEmail" required maxlength="120">
+              <div class="invalid-feedback">Escribe un correo válido.</div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">WhatsApp (opcional)</label>
+              <input type="tel" class="form-control" id="subTel" maxlength="20" placeholder="55 0000 0000">
+            </div>
+
+            <div id="subMsg" class="small text-muted"></div>
+
+            <button type="submit" class="btn btn-dark w-100 mt-2">
+              Enviar suscripción
+            </button>
+          </form>
+        </div>
+
+      </div>
     </div>
   </div>
-</div>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: false,     // para que se repita al hacer scroll arriba/abajo
+      offset: 80
+    });
+  </script>
 
-    <!-- Saludo en consola -->
-    <script>
-        console.log("Hola, bienvenida a mi periódico digital desde JavaScript 😄");
-    </script>
+  <!-- Saludo consola -->
+  <script>
+    console.log("Hola, bienvenida a mi periódico digital desde JavaScript 😄");
+  </script>
 
+  <!-- Suscripción a Google Sheets (Apps Script Web App) -->
+  <script>
+    // Pega aquí tu URL /exec de Apps Script
+    const APPS_SCRIPT_URL = "PEGA_AQUI_TU_URL_EXEC";
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    const form = document.getElementById("formSuscripcion");
+    const msg = document.getElementById("subMsg");
+
+    function setMsg(text, type="info") {
+      msg.className = "small";
+      if (type === "ok") msg.classList.add("text-success");
+      if (type === "err") msg.classList.add("text-danger");
+      if (type === "info") msg.classList.add("text-muted");
+      msg.textContent = text;
+    }
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const nombre = document.getElementById("subNombre");
+      const email = document.getElementById("subEmail");
+      const tel = document.getElementById("subTel");
+
+      // Validación básica
+      if (!nombre.value.trim()) { nombre.classList.add("is-invalid"); return; }
+      else nombre.classList.remove("is-invalid");
+
+      if (!email.value.trim() || !email.checkValidity()) { email.classList.add("is-invalid"); return; }
+      else email.classList.remove("is-invalid");
+
+      if (!APPS_SCRIPT_URL.includes("script.google.com")) {
+        setMsg("⚠️ Falta configurar la URL del Apps Script (Web App).", "err");
+        return;
+      }
+
+      setMsg("Enviando suscripción...", "info");
+
+      try {
+        const payload = {
+          nombre: nombre.value.trim(),
+          email: email.value.trim(),
+          tel: tel.value.trim()
+        };
+
+        const res = await fetch(APPS_SCRIPT_URL, {
+          method: "POST",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await res.json();
+
+        if (data.ok) {
+          setMsg(data.message || "¡Suscripción exitosa!", "ok");
+          form.reset();
+        } else {
+          if (data.code === "DUPLICATE") setMsg("⚠️ Este correo ya está suscrito.", "err");
+          else if (data.code === "INVALID") setMsg("⚠️ Revisa tus datos: nombre y correo válido.", "err");
+          else setMsg("⚠️ Ocurrió un error. Intenta de nuevo.", "err");
+        }
+      } catch (err) {
+        setMsg("⚠️ No se pudo conectar con Google Sheets. Reintenta.", "err");
+      }
+    });
+  </script>
 
 </body>
 </html>
